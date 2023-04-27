@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  -->
+<books>
+    <book sn="sa123233">
+        <name>肖申克的救赎</name>
+        <author>斯蒂芬<![CDATA[<金>]]></author>
+        <price>200</price>
+    </book>
+    <book sn="sa123233">
+        <name>肖申克的救赎</name>
+        <author>斯蒂芬<![CDATA[<金>]]></author>
+        <price>200</price>
+    </book>
+<!--    <book sn="sa15665665" name="斗破苍穹" author="天蚕土豆"/>-->
+</books>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子</title>
+  <style type="text/css">
+    #box{height: 630px;width: 630px;background: deepskyblue}
+    #box>div:nth-child(1){height: 200px;width: 600px;background: greenyellow;
+    float: left}
+    #box>div:nth-child(2){height: 200px;width: 200px;background: coral
+    ;float: left}
+    #box>div:nth-child(3){height: 200px;width: 200px;background: crimson;
+    float: left;margin:10px}
+    #box>div:nth-child(4){height: 200px;width: 200px;background: blueviolet
+    ;float: left}
+    #box>div:nth-child(5){height: 200px;width: 600px;background: black
+    ;float: left}
+    #black{width: 1200px; height:40px; background: darkgoldenrod;
+    margin: 10px auto}/* 居中*/
+    #aa{height: 100px;width: 100px; background: deeppink}
+    #bb{height: 100px;width: 200px; background: green;
+        border: deepskyblue 1px dashed;
+    }
+    #cc{height: 100px;width: 100px; background: blue;
+    margin-top: 10px}/* 会包含外间距合并 给父标签加个边框可以解决问题*/
+
+  </style>
+</head>
+<body>
+<div id="box">
+  <div>第一个元素</div>
+  <div>第二个元素</div>
+  <div>当前元素</div>
+  <div>第四个元素</div>
+  <div>第五个元素</div>
+</div>
+<div id="black">
+</div>
+<div id="aa"></div>
+<div id="bb"><div id="cc"></div></div>
+</body>
+</html>

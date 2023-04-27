@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+       window.onload=function () {//页面执行后调用
+          //创建标签显示在页面
+          var element = document.createElement("div");
+          element.innerHTML="米兰的小铁匠";//在内存中无法显示
+          ////给body添加子元素的对象
+          document.body.appendChild(element)//得执行到body以后才执行
+      }
+
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    $("div:not(.one)")//找到所有div标签里class类不为one的  has相反
+    $("div:even")//找到所有div标签里索引为偶数的
+    $("div:odd")//找到所有div标签里索引为奇数的
+    $("div:gt(3)")//找到所有div标签里索引大于3的 eq 小于 lt
+    $(":header")//h标签
+    $("p span")//从p标签里找自带span标签
+    //内容
+    $("div:contains('jack')")//找到文本包含jack的div
+    $("span:empty")//找到span没子元素的文本也是元素 parent 非空
+    //属性
+    $("div[id]")//找到div有id属性的 【'name'】 name!=['ccc']
+    $("input[name^='new']")//input标签里属性name以new开头  $='letter'相反
+    $("input[id][name^='new']")//input标签里有id属性 属性name以new开头  $='letter'相反
+    //表单
+    $(":radio")//获取复选框对象
+    $(":password:enabled").val("123456")//查密码框 表单可以赋值 enabled可用
+    $((":checkbox:checked").length)//获取复选框选中的个数
+    $((":select option:checked").length)//获取下拉列表选中的个数
+    //遍历
+    var $checkbox = $(":checkbox:checked");
+    $checkbox.each(function () {
+        alert(this.value)//获取value属性值   this就是dom对象
+    })
+    //元素筛选
+    $("p").eq(1)//p标签里索引为1的 .first()
+    $("p").filter(".cc")//查p标签里带cc class类的标签
+    $("div").has("span")//查div标签里有span的div
+    $("div").children()//查div标签里的子元素
+    $("p").find("span")//从p标签里找自带span标签
+    $("p").next()//p标签下一个元素  nextall（）后面所有同辈元素 prev  prevall前面全部
+    $("p").parent()//p标签父元素
+    $("div").silent("p")//找到所有兄弟元素为p的标签
+    $("span").add("#two")//找到所有span元素和id为two的元素
+     $("li:gt(5):not(:last)").hide() //li标签大于5除最后一个全影藏
+     $("li:gt(5):not(:last)").is(":hidden") //判断是否为隐藏是返回true
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

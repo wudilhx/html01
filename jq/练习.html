@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#p1").click(function () {
+        $(":checkbox").prop("checked",true);
+      })
+      $("#p2").click(function () {
+        $(":checkbox").prop("checked",false);
+      })
+      $("#p3").click(function () {
+       $(":checkbox").each(function () {
+           this.checked=!this.checked;
+       })
+      })
+        $(":checkbox[name='happ']").prop("checked",true)
+    })
+  </script>
+</head>
+<body>
+  <input type="checkbox" name="happ" value="bask" >篮球
+  <input type="checkbox" name="happy" value="foot">足球
+  <input type="checkbox" name="happy" value="pingpang">乒乓球
+ <br>
+<button id="p1">全选</button>
+<button id="p2">全不选</button>
+<button id="p3">反选</button>
+</body>
+</html>

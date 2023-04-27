@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style type="text/css">
+    div{height: 100px;width: 100px;background: cornflowerblue;
+       }
+  </style>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script>
+    $(function () {
+      //自动调用
+      // var sum=function () {
+      //   $("div").toggle(1000,sum)
+      // }
+      // sum()
+      //可以设置时间还可以穿方法
+      $("#p1").click(function () {
+        //1展示  2fadein() 淡入
+        $("div").show(2000,function () {
+          alert(1)
+        })
+      })
+      //2隐藏   3fedeOut()淡出
+      $("#p2").click(function () {
+        $("div").hide(1000)
+      })
+      //3切换 fadeToggle
+      $("#p3").click(function () {
+        $("div").toggle(1000)
+      })
+      //
+    })
+     
+  </script>
+</head>
+<body>
+<div>动画</div>
+<br>
+<button id="p1">展示</button>
+<button id="p2">隐藏</button>
+<button id="p3">切换</button>
+</body>
+</html>

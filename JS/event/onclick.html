@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    //静态调用onclick事件      onclick事件是单点事件
+    function ff() {
+      alert("onclick被调用")
+    }
+    window.onload=function () {
+        //获取标签对象
+        // 标签对象.事件名=function (){}
+        //document 为整个页面  getElementById 通过id获取元素《标签》对象
+        var ele = document.getElementById("cc");
+        //alert(ele)
+        ele.onclick = function () {
+            alert("动态标签onclick被调用")
+        }
+    }
+  </script>
+</head>
+<body>
+<button onclick="ff()">按钮一</button>
+<button id="cc">按钮二</button>
+</body>
+</html>

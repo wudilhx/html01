@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script>
+    $(function () {
+      //1 插在文本后面   prependTo插在前面   后面可以是标签也可以是标签对象
+      $("<h1 style='color: palegreen'>标签一</h1>").appendTo("div")
+      //2 插在外面 divhoumian Befor前面
+      $("<h2 style='color: cornflowerblue'>标签二</h2>").insertAfter("h1")
+      //3 前面替换后面
+        $("<h1 style='color: chocolate'>标签</h1>").replaceAll("div")
+      //4 删除   empty 拿标签里的内容
+        $("span").remove();
+    })
+  </script>
+</head>
+<body>
+<div id="cc">132</div>
+<div>153</div>
+<span>你好</span>
+</body>
+</html>

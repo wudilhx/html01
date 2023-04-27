@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+  <style type="text/css">
+    div{height: 200px;width: 200px}
+    #box{background: cornflowerblue;position: relative;z-index: 1}
+    /*1绝对定位不会占据空间位置 2移动相对于原地坐标移动
+      3 如果父类(父父类)有定位会相对于父类坐标移动     相对最近的移动
+     z-index: 1 重合后谁在上面显示 */
+    #box1{background: coral;position: absolute;left: 100px;top: 100px}
+    #box2{background: darkgray}
+  </style>
+</head>
+<body>
+<div id="box"></div>
+<div id="box1"></div>
+<div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script>
+    $ (function () {
+        //1 不传参数是获取 传参为设置
+        alert($("div").html())
+       // $("div").html("<hi>我是标题</hi>")//设置
+        //2 不传参数是获取 传参为设置  wenben
+        alert($("div").text())
+        $("div").text("<hi>我是标题</hi>")//设置
+        $("button").click(function () {
+            //3 获取表单内容
+            alert($("input").val())
+            $("input").val("33333")//设置值
+        })
+        //4 操作单选
+        $(":radio").val(["radio1"])//(["radio1",加value值])
+        //$(":radio,:select").val(["radio1","value"])
+        //5 attr获取
+        alert($(":radio:first").attr("name"))
+        //设置   value=abc;
+        $(":radio:first").attr("value","abc");
+        //6prop 选中就是true checked  disabled selected
+        alert($(":radio:first").prop("checked"))
+        $(":radio:last").prop("checked",true)
+    })
+  </script>
+</head>
+<body>
+<div>我是div标签<span>米兰的小铁匠</span></div><br>
+<input type="text" id="usname">
+<input name="radio" type="radio" value="radio1" checked="checked">radio1
+<input name="radio" type="radio" value="radio2">radio2
+<button>按钮</button>
+</body>
+</html>

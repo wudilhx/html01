@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!-- action 发送的服务器地址    -->
+<form action="../htmltext/04text.html" method="post"><!--   表单  method密码不显示 -->
+  名称:<input type="text" disabled="disabled" name="nickname"><br/><!-- 文本框  -->
+  密码:<input type="password" name="pwd"><br/> <!-- 密码 -->
+  性别：<input type="radio" name="geran" value="man">男  <!--value值表示提交给服务器的值-->
+       <input type="radio" name="geran" value="girl" checked>女<br/><!--check 默认选  单选按钮 -->
+       <input type="checkbox" name="happy" value="bassketball">篮球<br/>      <!--复选框  -->
+       <input type="checkbox" name="happy" value="football" checked>足球<br/>
+       <input type="checkbox" name="happy" value="ball">羽毛球<br/>
+  星座： <select name="str" ><!-- 下拉列表 multiple多选-->
+        <option value="1">金牛座</option><!-- 选项 -->
+        <option value="2">水平座</option><!-- 选项 -->
+        <option value="3">白羊座</option><!-- 选项 -->
+        <option value="4" selected>射手座</option><!-- 选项默认 -->
+    </select> <br>
+  备注：<textarea name="apple" rows="5" cols="50"></textarea><br/><!-- 多行文本框4行50字符 -->
+    <input type="submit" value="注册"> <!-- 提交 -->
+    <input type="reset" value="重置">   <!-- 重置按钮 -->
+    <input type="button">
+
+</form><!--   表单   -->
+</body>
+</html>

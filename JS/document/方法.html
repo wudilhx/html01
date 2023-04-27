@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+          function f() {
+              //innerText取文本内容
+              alert(document.getElementById("p4").innerHTML)//获取li标签文本内容
+          }
+          function f1() {
+              alert(document.getElementsByTagName("li").length)//获取li标签集合的长度
+          }
+          function f2() {
+              //获取city节点（标签）下的li标签的个数
+              alert(document.getElementById("city").getElementsByTagName("li"))
+              alert(document.getElementById("city").getElementsByTagName("li").length)
+          }
+
+          function f3() {
+              //获取ul标签下所有子节点 空格也是个节点
+              alert(document.getElementById("city").childNodes.length)
+          }
+
+          function f4() {
+              //取phone节点里的第一个节点
+              alert(document.getElementById("phone").firstElementChild.innerHTML)
+          }
+         function f5() {
+              //返回北京的父节点
+              //北京节点
+            var ele = document.getElementById("p4");
+              //北京的父节点
+              alert(ele.parentNode.innerHTML)
+      }
+      function f6() {
+          var Id = document.getElementById("android");
+          alert(Id.previousSibling.previousSibling.innerHTML)
+      }
+
+  </script>
+</head>
+<body>
+<ul id="city">
+  <li id="p4">北京</li>
+  <li>上海</li>
+  <li>天津</li>
+</ul>
+<ul id="phone">
+  <li>IOS</li>
+  <li id="android">Android</li>
+  <li>windows</li>
+</ul>
+<button onclick="f()">按钮</button>
+<button onclick="f1()">按钮二</button>
+<button onclick="f2()">按钮三</button>
+<button onclick="f3()">按钮四</button>
+<button onclick="f4()">按钮五</button>
+<button onclick="f5()">按钮六</button>
+<button onclick="f6()">按钮七</button>
+</body>
+</html>

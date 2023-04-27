@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+    //$(.mclass)类选择器查
+    //直接到加载页面
+  $(function (){//$("li:last/first")去最后一个元素
+    $("<div>"+
+            "<span>熊大</span>"+
+            "</div>").appendTo("body")
+//给按钮绑定onclick事件 “*”
+    $("#p4").click(function () {
+     $(".f30").css("background-color","#bbffaa")
+    })
+    //所有元素
+            $("#p5").click(function () {
+              $("*").css("background-color","#bbffaa")
+            })
+
+          //id为f50和标签为p的  组合选择器
+    $("#p6").click(function () {
+      $("p,#f50").css("background-color","#bbffaa")
+    })
+          }
+    )
+
+  </script>
+</head>
+<body>
+<div>
+  <span class="f30">熊大</span>
+  <span class="f40">熊二</span>
+  <span id="f50">光头强</span>
+  <p>吉吉</p>
+
+  <button id="p4">按钮1</button>
+  <button id="p5">按钮2</button>
+  <button id="p6">按钮3</button>
+</div>
+</body>
+</html>

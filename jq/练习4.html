@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          $("#ss").on(" mouseover  mouseout mousemove",function (event) {
+              if(event.type== "mouseover"){//移入显示
+                  $("#big").show()
+              }else if (event.type== "mouseout"){//移出
+                  $("#big").hide()
+              }else if (event.type="mousemove"){
+                  $("#big").offset({  //event.pageX鼠标坐标
+                      left:event.pageX+10,
+                      top:event.pageY+10
+                  })
+
+              }
+          })
+
+      })
+
+  </script>
+</head>
+<body>
+<img id="ss" src="../htmltext/E-C.png" height="100" width="100">
+<div id="big">
+<img  src="../htmltext/R-C%20.png" height="100" width="100">
+</div>
+</body>
+</html>

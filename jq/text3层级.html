@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#p4").click(function () {
+        $(" div span").css("background-color","#bbffaa")
+      })
+      //子元素
+      $("#p5").click(function () {
+        $("body >div").css("background-color","#bbffaa")
+      })
+      //id 为f40 span元素   +跟在标签后面的   ~为前面的表单同辈的元素
+      $("#p6").click(function () {
+        $("#f40+span").css("background-color","#bbffaa")
+      })
+        //
+        $("#p7").click(function () {
+            $("span:first").css("background-color","#bbffaa")
+        })
+    })
+
+
+  </script>
+</head>
+<body>
+<div>
+  <span class="f30">熊大</span>
+  <span id="f40">熊二</span>
+  <span id="f50">光头强</span>
+  <p>吉吉</p>
+
+  <button id="p4">按钮1</button>
+  <button id="p5">按钮2</button>
+  <button id="p6">按钮3</button>
+  <button id="p7">按钮4</button>
+</div>
+ </body>
+</html>

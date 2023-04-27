@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*
+     <style type="text/css">    为css环境
+    1  p为标签样式表    2.f20为类样式  3 #p4为id样式 加粗 风格
+     4 div p 为组合样式 5 外部css <link rel="stylesheet" href="lhx.css">
+        */
+        p{ color: aqua   }
+       #cc, .f20{     font-size: 20px}
+        div p{color: brown}
+
+        table{
+            border: 1px cornflowerblue solid;
+            border-collapse: collapse;/* 合并单元格 */
+        }
+        td{
+            border: 1px cornflowerblue solid;
+        }
+         span.f40{border: 5px chartreuse dashed        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="lhx.css">
+
+    </head>
+<body>
+<p>这是一个标签</p>
+<p id="cc">这是一个标签</p>
+<p class="f20">这是一个标签</p>
+<div>
+   <p><span>hellow</span></p>
+   <span class="f30">world</span>
+    <span class="f40">cccc</span>
+    <!--    嵌入式样式    -->
+   <p style="font-size:20px;font-weight: bolder">!!!</p>
+    </div>
+</div>
+<table>
+    <tr>
+        <td>12</td>
+        <td >34</td>
+    </tr>
+</table>
+</body>
+</html>

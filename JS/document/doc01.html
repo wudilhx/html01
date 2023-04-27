@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+      window.onload=function () {
+          var elementById = document.getElementById("cc");
+          alert(elementById)
+      }
+      //为什么不执行因为 页面没浏览完 没有得到document 对象呢得执行完标签才行
+     // alert(document.getElementById("cc"))
+    //用户点击按钮时，要获取对话框的内容，验证其是否合法
+    function f() {
+      var elementById = document.getElementById("cc");
+      //[object HTMLInputElement]标签对象 也就是doc对象
+      // alert(elementById)
+      //要获取对话框内容
+       alert(elementById.value)
+        var value = elementById.value;
+        var elementById1 = document.getElementById("cc1");//获取span对象
+        //innerHTML 这个方法可以获取修改标签内容
+        //验证用户名是否合法 用正则表达式 patt为正则对象
+       var patt= /^\w{4,12}$/;
+       //有个text方法 验证 合法为true
+        //childNodes获取所有子节点
+        if (patt.test(value)){
+            elementById1.innerHTML="输入正确";
+         // alert(elementById1.childNodes.length)
+        }else {
+           elementById1.innerHTML="输入错误";
+        }
+    }
+  </script>
+</head>
+<body>
+ 用户名:<input type="text" id="cc" value="scc" name="ss">
+           <span id="cc1" style="color: crimson"></span>
+ //onclick事件静态调用
+      <button onclick="f()" >按钮</button>
+</body>
+</html>

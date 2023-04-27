@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </style>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("button:eq(0)").click(function () {
+        //1选中到下边
+        $("select:eq(0) option:selected").appendTo($("select:eq(1)"))
+      })
+      $("button:eq(1)").click(function () {
+        //2全选
+        $("select:eq(0) option").appendTo($("select:eq(1)"))
+      })
+      $("button:eq(2)").click(function () {
+        //3选中到上边
+        $("select:eq(1) option:selected").appendTo($("select:eq(0)"))
+      })
+      $("button:eq(3)").click(function () {
+        //4全选
+        $("select:eq(1) option").appendTo($("select:eq(0)"))
+      })
+    })
+  </script>
+      
+</head>
+<body>
+<div id="left">
+<select name="str" multiple="multiple" ><!-- 下拉列表 multiple多选-->
+  <option value="1">金牛座</option><!-- 选项 -->
+  <option value="2">水平座</option><!-- 选项 -->
+  <option value="3">白羊座</option><!-- 选项 -->
+  <option value="4" selected>射手座</option><!-- 选项默认 -->
+</select>
+  <button>选中到左边</button>
+  <button>全部</button>
+</div>
+<div>
+  <select name="str2" multiple="multiple">
+
+  </select>
+  <button>选中到右边</button>
+  <button>全部</button>
+</div>
+
+</body>
+</html>

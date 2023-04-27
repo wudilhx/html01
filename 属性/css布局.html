@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动属性</title>
+</head>
+<style type="text/css">
+    /*1 浮动不会占原来的空间  div独占一行   浮动元素不会重叠
+    2 浮动元素外边缘不会不会超过父元素的内边缘
+    3 行内元素浮动后将可以设置宽高 并不会独占一行
+         4 overflow: hidden 可以让父类感知子类高度
+        5  父类设置浮动 子类就像那浮动  6 clear: both;清除两边浮动   float: right;*/
+    #c1{ background: aqua; float: left;
+           }
+    #c2{height: 200px;width: 200px;background: black;
+        float: right}
+    #c3{height: 200px;width: 200px;background: cornflowerblue;
+    float: right}
+    #c4{height: 200px;width: 200px;background: chocolate;
+     float: right}
+    #c5{height: 600px;width: 400px;background: blueviolet; clear: both;
+    }
+
+
+</style>
+
+<body>
+<div id="c1">
+<div id="c2"></div>
+<div id="c3"></div>
+<div id="c4"></div>
+<div id="c5"></div>
+</div>
+</body>
+</html>

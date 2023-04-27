@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      //live绑定的所有元素都可以绑定
+      //定义一个函数
+      var deletes = function () {
+        //在事件响应的function函数中，有一个this对象，这个this对象就是当前
+        //响应对象的dom对象
+        var pa = $(this).parent().parent();//要删除的行
+        var name = pa.find("td:first").text();
+        if(confirm("你确定要删除"+name )){//confirm为提示语句点是返回true
+          pa.remove();}
+        return false;
+      }
+      $("#butt").click(function () {
+        //1添加
+        //获取对话框内容
+        var name = $("#p10").val();
+        var email = $("#e1").val();
+        var salary = $("#s1").val();
+        var $1 = $("<tr>" +
+                "    <td>name</td>" +
+                "    <td>email</td>" +
+                "    <td>salary</td>" +
+                "    <td><a href=\"delete?id002\">delete</a></td>" +
+                "  </tr>");
+        //放到表格里
+        $1.appendTo($("#emply"))
+        //新加的标签绑上单机事件
+         $("a").click(deletes)
+
+        })
+      //2 删除
+       $("a").click(deletes)
+      //3删除
+      // $("a").click(function () {
+      //   //在事件响应的function函数中，有一个this对象，这个this对象就是当前
+      //   //响应对象的dom对象
+      //   var pa = $(this).parent().parent();//要删除的行
+      //   //有顺序
+      //   var name = pa.find("td:first").text();
+      //   if(confirm("你确定要删除"+name )){//confirm为提示语句点是返回true
+      //     pa.remove();
+      //   }
+      //   //可以阻止元素的默认行为
+      //   return false;
+      // })
+    })
+  </script>
+</head>
+<body>
+<table id="emply" border="1">
+  <tr id="p4">
+    <th>Name</th>
+    <th>Email</th>
+    <th>Salary</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Tom</td>
+    <td>Tom@.com</td>
+    <td>5500</td>
+    <td><a href="delete?id001">delete</a>></td>
+  </tr>
+  <tr>
+    <td>Bob</td>
+    <td>Bob@.com</td>
+    <td>6600</td>
+    <td><a href="delete?id002">delete</a></td>
+  </tr>
+</table>
+<br/>
+<br/>
+<h1>添加新员工</h1>
+<table id="emply2" border="1">
+  <tr>
+    <td class="word">name:</td>
+    <td class="word2"><input type="text" name="Name" id="p10"></td>
+  </tr>
+  <tr>
+    <td class="word">email</td>
+    <td class="word2"><input type="text" name="email" id="e1" ></td>
+  </tr>
+  <tr>
+    <td class="word">salary</td>
+    <td class="word2"><input type="text" name="salary" id="s1"></td>
+  </tr>
+  <tr >
+    <td colspan="2" align="center"><button id="butt">Submit</button></td>
+  </tr>
+
+</table>
+</body>
+</html>

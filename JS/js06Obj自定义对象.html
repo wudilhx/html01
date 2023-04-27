@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    //对象定义  var 变量名= new Object（）； 对象实例
+    //变量名.属性值=值 // 定义属性
+    //变量名.函数名= function(){}; 定义一个方法
+     var obj=new Object();
+     alert(typeof obj)
+     obj.name="熊二";
+     obj.age=13;
+     obj.fun=function () {
+            alert(this.name+this.age)
+     }
+     //调用   变量名.属性/函数名
+    alert(obj.name);
+    obj.fun();
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

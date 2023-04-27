@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    function cc(num1,num2){
+      alert(arguments.length)//隐形函数 就是一个自加的数组
+      var sum=0;
+      for (var i=0;i<arguments.length;i++){
+        if (typeof (arguments[i])=="number"){
+        sum+= arguments[i];
+      }
+      }
+      return sum;
+    }
+    alert(cc(1,2,3,"abc",4,5))
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

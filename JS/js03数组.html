@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    var arr=[1,2];
+    alert(arr.length); //2
+    arr[0]=12;
+    alert(arr[0])//12
+    alert(arr.length)  //数组根据下标的最大值自动扩容 2
+    arr[2]=13;
+    alert(arr.length)   //3
+    for (var i=0;i<arr.length;i++){
+      alert(arr[i])     // 12 初始值：undefined  13
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

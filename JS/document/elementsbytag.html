@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    //返回带指定标签的集合
+    function f() {
+        alert(document.getElementsByTagName("input"))
+        //根据标签名获取doc对象集合
+        var el = document.getElementsByTagName("input");
+        for (var i = 0; i <el.length ; i++) {
+            el[i].checked=true;
+        }
+    }
+  </script>
+</head>
+<body>
+<input type="checkbox"  value="c++" checked="checked">C++
+<input type="checkbox"  value="web">Web
+<input type="checkbox"  value="java">Java
+<br>
+<button onclick="f()">全选</button>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style type="text/css">
+      div{height: 100px;width: 50px}
+      div.f40{ border: 2px cornflowerblue dashed}
+      div.redio{background: palegreen}
+  </style>
+  <script type="text/javascript" src="jquery-3.6.1.js"></script>
+  <script type="text/javascript">
+      $(function () {// .dd空格a{}   子标签为a的用
+          var $div = $("div:first");
+          //1添加样式
+          $("#cc").click(function () {
+             $div.addClass("redio f40")
+          })
+          //2删除样式
+          $("#bb").click(function () {
+              $div.removeClass("f40")
+          })
+          //3切换
+          $("#aa").click(function () {
+              $div.toggleClass("f40")
+          })
+          //4坐标
+          $("#dd").click(function () {
+              var offset = $div.offset();
+              // console.log(offset) 控制台
+              $div.offset({
+                  top:100,left:50
+              })
+          })
+      })
+  </script>
+
+</head>
+<body>
+<div  ></div>
+<button id="cc">按钮一</button>
+<button id="bb">按钮er</button>
+<button id="aa">切换</button>
+<button id="dd">坐标</button>
+</body>
+</html>
